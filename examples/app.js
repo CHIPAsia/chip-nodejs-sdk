@@ -98,10 +98,12 @@ app.post('/callback', async (req, res) => {
 
 app.post('/webhook/payment', async (req, res) => {
   const { rawBody, headers } = req
+  const parsed = JSON.parse(rawBody)
   const xsignature = headers['x-signature']
   const publicKey = webhookPublicKey
 
   const verified = apiInstance.verify(rawBody, Buffer.from(xsignature, 'base64'), publicKey)
+  console.log('/webhook/payment EVENT: ', parsed.event_type)
   console.log('/webhook/payment VERIFIED: ', verified)
   res.end("WEBHOOK OK!")
 })
