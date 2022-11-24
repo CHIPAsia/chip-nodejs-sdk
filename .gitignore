@@ -1,0 +1,6 @@
+# misc
+.DS_STORE
+
+# nodes
+node_modules/
+package-lock.json

@@ -1,0 +1,51 @@
+Arguments: 
+  /Users/muhammadhasni/.nvm/versions/node/v18.10.0/bin/node /Users/muhammadhasni/.nvm/versions/node/v18.10.0/bin/yarn start
+
+PATH: 
+  /opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/Users/muhammadhasni/.pyenv/shims:/Users/muhammadhasni/.rbenv/shims:/Users/muhammadhasni/.nvm/versions/node/v18.10.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/muhammadhasni/.ebcli-virtual-env/executables
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.10.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/muhammadhasni/Desktop/projects/chip-in/plugins/chip-nodejs-sdk/examples/package.json: Unexpected string in JSON at position 148
+      at JSON.parse (<anonymous>)
+      at /Users/muhammadhasni/.nvm/versions/node/v18.10.0/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/muhammadhasni/.nvm/versions/node/v18.10.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/muhammadhasni/.nvm/versions/node/v18.10.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "examples",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon --inspect app.js"
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.20.1",
+      "Chip": "github:CHIPAsia/chip-nodejs-sdk",
+      "express": "^4.18.2"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.20"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
