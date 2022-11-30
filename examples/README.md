@@ -2,7 +2,7 @@
     <a href="https://nodejs.org">
         <img
             alt="NodeJS"
-            src="https://en.wikipedia.org/wiki/Node.js#/media/File:Node.js_logo.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png"
             width="150"
             style="background-color:black;padding:15px;border-radius:5px">
     </a>
