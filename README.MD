@@ -1,14 +1,21 @@
-# Payment library #
+# Chip NodeJS library
 
-## Installing ##
+## Prerequisite
+Before you start, make sure you already have created `Brand ID` and `API Key` from your developer dashboard by logging-in into [merchant portal](https://gate.chip-in.asia/login).
 
-## npm ##
+## Installation
 
+### npm
 ```bash
 npm install git+ssh://git@github.com/CHIPAsia/chip-nodejs-sdk.git#v1.0.0
 ```
 
-## Getting Started ##
+### yarn
+```bash
+yarn add git+ssh://git@github.com/CHIPAsia/chip-nodejs-sdk.git#v1.0.0
+```
+
+## Getting Started
 
 Simple usage looks like:
 
@@ -34,12 +41,11 @@ let callback = (error, data, response) => {
 apiInstance.paymentMethods(brandId, "EUR", {}, callback);
 ```
 
-## Examples ##
-
-See `example.js` for more examples
-
-## Testing ##
+## Testing
 
 ```bash
 npm run test
 ```
+
+## Example
+Check our examples [here](./examples).

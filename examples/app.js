@@ -49,7 +49,7 @@ app.get('/', async (req, res) => {
   })
 })
 
-app.get('/payment_methods', async (req, res) => {
+app.get('/api/payment_methods', async (req, res) => {
   apiInstance.paymentMethods(brandId, "MYR", {}, function(error, data, response) {
     if (error) {
       console.log('API call failed. Error:', error)
@@ -61,7 +61,7 @@ app.get('/payment_methods', async (req, res) => {
   })
 })
 
-app.get('/create_purchase', async (req, res) => {
+app.get('/api/create_purchase', async (req, res) => {
   const client = { email: 'test@test.com' }
   const product = { name: 'Test', price: 100 }
   const details = { products: [ product ] }
@@ -71,7 +71,7 @@ app.get('/create_purchase', async (req, res) => {
     purchase: details,
     success_redirect: `${basedUrl}/redirect.php?success=1`,
     failure_redirect: `${basedUrl}/redirect.php?success=0`,
-    success_callback: `${basedUrl}/callback`
+    success_callback: `${basedUrl}/api/callback`
   }
 
   apiInstance.purchasesCreate(purchase, function(error, data, response) {
@@ -86,7 +86,7 @@ app.get('/create_purchase', async (req, res) => {
   })
 })
 
-app.post('/callback', async (req, res) => {
+app.post('/api/callback', async (req, res) => {
   const { rawBody, headers } = req
   const xsignature = headers['x-signature']
   const publicKey = JSON.parse(await getPublicKey())
@@ -96,7 +96,7 @@ app.post('/callback', async (req, res) => {
   res.end()
 })
 
-app.post('/webhook/payment', async (req, res) => {
+app.post('/api/webhook/payment', async (req, res) => {
   const { rawBody, headers } = req
   const parsed = JSON.parse(rawBody)
   const xsignature = headers['x-signature']
@@ -108,9 +108,9 @@ app.post('/webhook/payment', async (req, res) => {
   res.end("WEBHOOK OK!")
 })
 
-app.get('/public_key', async (req, res) => {
+app.get('/api/public_key', async (req, res) => {
   const data = await getPublicKey()
-  res.end(data)
+  res.setHeader('Content-Type', 'application/json').end(JSON.parse(data))
 })
 
 const getPublicKey = () => {
