@@ -7,12 +7,12 @@ Before you start, make sure you already have created `Brand ID` and `API Key` fr
 
 ### npm
 ```bash
-npm install git+ssh://git@github.com/CHIPAsia/chip-nodejs-sdk.git#v1.0.0
+npm install https://github.com/CHIPAsia/chip-nodejs-sdk.git#v1.0.0
 ```
 
 ### yarn
 ```bash
-yarn add git+ssh://git@github.com/CHIPAsia/chip-nodejs-sdk.git#v1.0.0
+yarn add https://github.com/CHIPAsia/chip-nodejs-sdk.git#v1.0.0
 ```
 
 ## Getting Started
