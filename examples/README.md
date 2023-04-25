@@ -63,7 +63,7 @@ yarn
 
 2. Run application locally:
 ```bash
-node run start
+npm run start
 
 # OR
 
